@@ -3,7 +3,14 @@
     "description": "Easy and reliable way to import, parse, validate and transform your csv files with laravel",
     "type": "library",
     "license": "MIT",
-    "keywords": ["csv", "import", "laravel", "parse", "validate", "transform"],
+    "keywords": [
+        "csv",
+        "import",
+        "laravel",
+        "parse",
+        "validate",
+        "transform"
+    ],
     "authors": [
         {
             "name": "Roman Gilyov",
@@ -11,16 +18,16 @@
         }
     ],
     "require-dev": {
-        "phpunit/phpunit": ">=5.7",
-        "mockery/mockery": "^0.9.4",
-        "predis/predis": "1.0.*"
+        "mockery/mockery": "^1.6.15",
+        "phpunit/phpunit": "^13.4.5",
+        "predis/predis": "^3.7.0"
     },
     "require": {
-        "php": ">=8.2",
-        "arvenil/ninja-mutex": "dev-master",
-        "league/csv": "^9.8.0",
-        "laravel/framework": ">=8.0",
-        "nesbot/carbon": ">=2.6"
+        "arvenil/ninja-mutex": "^0.6",
+        "illuminate/support": "^13.0",
+        "league/csv": "^9.29.0",
+        "nesbot/carbon": "^3.15.1",
+        "php": "^8.5"
     },
     "autoload": {
         "psr-4": {
@@ -32,5 +39,15 @@
             "RGilyov\\CsvImporter\\Test\\": "tests/"
         }
     },
-    "minimum-stability": "beta"
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "archive": {
+        "exclude": [
+            "/vendor",
+            "/.history",
+            "/.env",
+            "/.env.*",
+            "/composer.lock"
+        ]
+    }
 }
